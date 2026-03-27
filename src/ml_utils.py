@@ -52,3 +52,4 @@ if __name__ == "__main__":
     model = MLModel(model_path="./models/model.pkl", report_path="./models/training_report.json")
     model.load_model()
     print(model.get_accuracy())
+    print(model.model)

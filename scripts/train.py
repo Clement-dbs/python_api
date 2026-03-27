@@ -48,13 +48,13 @@ print(cm)
 labels = data.target_names
 
 # Visualisation
-fig, ax = plt.subplots(figsize=(8, 6))
-sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
-            xticklabels=labels,
-            yticklabels=labels,
-            ax=ax)
-plt.tight_layout()
-plt.show()
+# fig, ax = plt.subplots(figsize=(8, 6))
+# sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+#             xticklabels=labels,
+#             yticklabels=labels,
+#             ax=ax)
+# plt.tight_layout()
+# plt.show()
 
 # Save
 with open("./models/model.pkl", "wb") as f:

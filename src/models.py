@@ -10,14 +10,14 @@ class IrisClass(str, Enum):
 
 
 class PredictionInput(BaseModel):
-    sepal_length: int = Field(..., gt=0, description="Longueur du sépale > 0")
-    sepal_width: int = Field(..., gt=0, description="Largeur du sépale > 0")
-    petal_length: int = Field(..., gt=0, description="Longueur du pétale > 0")
-    petal_width: int = Field(..., gt=0, description="Largeur du pétale ≥ 0")
+    sepal_length: float = Field(..., gt=0, description="Longueur du sépale > 0")
+    sepal_width: float = Field(..., gt=0, description="Largeur du sépale > 0")
+    petal_length: float = Field(..., gt=0, description="Longueur du pétale > 0")
+    petal_width: float = Field(..., gt=0, description="Largeur du pétale ≥ 0")
 
 class PredictionOutput(BaseModel):
     prediction: IrisClass
-    confidence: int = Field(..., gt=0, le=1, description="Longueur du sépale > 0")
+    confidence: float = Field(..., gt=0, le=1, description="Confiance de la prédiction")
     probabilities: Dict[str, float]
 
 class HealthResponse(BaseModel):
